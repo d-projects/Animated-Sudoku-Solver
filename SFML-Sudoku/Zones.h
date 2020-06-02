@@ -1,3 +1,4 @@
+// class for the squares on the board
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <string>
@@ -24,7 +25,7 @@ public:
 	}
 
 	// creates squares, determines their position on the sudoku grid, formats them, and stores them in a vector
-	void push_zone(sf::Font& f) {
+	void push_zone() {
 		if (major_zones.size() > zones * zones) {
 			return;
 		}

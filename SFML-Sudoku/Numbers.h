@@ -1,3 +1,4 @@
+// class for the numbers as text
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <string>
@@ -11,21 +12,20 @@ class Numbers {
 public:
 	Numbers() : numbers() {
 
-		if (!font.loadFromFile("OpenSans-Regular.ttf")) {
-			std::cout << "Error loading font file" << std::endl;
-		}
-	}
-
-	void set_all_numbers(int nums[9][9]) {
+		// creates a text instance for each square on the board; the text string is not set yet
 		for (int i = 0; i < 9; i++) {
 			for (int j = 0; j < 9; j++) {
 				sf::Text num;
 				num.setCharacterSize(20);
 				num.setFillColor(sf::Color::Red);
 				num.setFont(font);
-				if (nums[i][j] > 0) { num.setString(std::to_string(nums[i][j])); }
 				numbers[i][j] = num;
 			}
+		}
+
+		// loads the Open Sans font; SFML doesn't have direct access to fonts
+		if (!font.loadFromFile("OpenSans-Regular.ttf")) {
+			std::cout << "Error loading font file" << std::endl;
 		}
 	}
 
@@ -34,6 +34,7 @@ public:
 		numbers[col][row].setString(std::to_string(n));
 	}
 
+	// sets position of text number on board
 	void set_position(int row, int col, sf::Vector2f v) {
 		numbers[row][col].setPosition(v);
 	}

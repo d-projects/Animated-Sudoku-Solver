@@ -1,12 +1,8 @@
+// class that utlizes the backtracking algorithm to solve the puzzle
 #pragma once
 #include "Numbers.h"
 #include "Zones.h"
 #include <iostream>
-
-#include <chrono>
-#include <thread>
-
-//using namespace std::chrono_literals;
 
 class Sudoku {
 
@@ -35,16 +31,7 @@ public:
 		board[row][col] = num;
 	}
 
-	void print() {
-		for (auto row : board) {
-			for (int col = 0; col < 9; col++) {
-				std::cout << row[col] << " ";
-			}
-			std::cout << std::endl;
-		}
-		std::cout << std::endl;
-	}
-
+	// attempts to solve the board and returns a boolean to solve()
 	bool solve_board(int row = 0, int col = 0) {
 	
 		if (row > 8) {
@@ -78,10 +65,13 @@ public:
 
 	}
 
+	// since the solving function needs to return a boolean it is called from this one, rather than being this one 
 	std::vector<std::vector<int>> solve() {
+		// returns the moves that were done to solve the board (if it is solvable)
 		if (solve_board()) { return changes; }
 	}
 
+	// checks if a number choice is valid on the sudoku grid
 	bool valid(int row, int col) {
 		int num = board[row][col];
 		int zone_row = (row / 3) * 3, zone_col = (col / 3) * 3;
@@ -100,5 +90,6 @@ public:
 		}
 		return true;
 	}
+
 
 };

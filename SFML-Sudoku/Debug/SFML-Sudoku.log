@@ -1,6 +1,6 @@
 ﻿  SFML-Sudoku.cpp
-C:\Users\dulha\Desktop\Github_Repos\SFML-Sudoku\SFML-Sudoku\Zones.h(28,26): warning C4018:  '>': signed/unsigned mismatch
-C:\Users\dulha\Desktop\Github_Repos\SFML-Sudoku\SFML-Sudoku\Zones.h(58,11): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\dulha\Desktop\Github_Repos\SFML-Sudoku\SFML-Sudoku\Zones.h(29,26): warning C4018:  '>': signed/unsigned mismatch
 C:\Users\dulha\Desktop\Github_Repos\SFML-Sudoku\SFML-Sudoku\Zones.h(59,11): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\dulha\Desktop\Github_Repos\SFML-Sudoku\SFML-Sudoku\Sudoku.h(83): warning C4715:  'Sudoku::solve': not all control paths return a value
+C:\Users\dulha\Desktop\Github_Repos\SFML-Sudoku\SFML-Sudoku\Zones.h(60,11): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\dulha\Desktop\Github_Repos\SFML-Sudoku\SFML-Sudoku\Sudoku.h(72): warning C4715:  'Sudoku::solve': not all control paths return a value
   SFML-Sudoku.vcxproj -> C:\Users\dulha\Desktop\Github_Repos\SFML-Sudoku\Debug\SFML-Sudoku.exe
