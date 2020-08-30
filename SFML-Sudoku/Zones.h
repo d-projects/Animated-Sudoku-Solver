@@ -48,20 +48,20 @@ public:
 		int count = 0;
 		for (int i = 0; i < 9; i++) {
 			for (int j = 0; j < 9; j++) {
-				nums.set_position(i, j, sf::Vector2f(static_cast<float>((count / zones) * size + size/2), static_cast<float>((count % zones)) * size + size/4));
+				nums.set_position(i, j, sf::Vector2f(static_cast<float>((count / zones) * size + size / 2), static_cast<float>((count % zones)) * size + size / 4));
 				count++;
 			}
 		}
 	}
 
 	// highlights a square  as blue when it is clicked
-	std::vector<int> highlight_zone(sf::Vector2i pos){
+	std::vector<int> highlight_zone(sf::Vector2i pos) {
 		int row = pos.y / (size);
 		int col = pos.x / (size);
 		// changes previously highlighted square to white
 		major_zones[last_clicked_col * zones + last_clicked_row].setFillColor(sf::Color::White);
 		// changes new clicked sqaure to blue
-		major_zones[col*zones + row].setFillColor(sf::Color::Cyan);
+		major_zones[col * zones + row].setFillColor(sf::Color::Cyan);
 		last_clicked_row = row;
 		last_clicked_col = col;
 
@@ -78,12 +78,12 @@ public:
 		int g = rand() % 255;
 		int b = rand() % 255;
 
-		major_zones[col * zones + row].setFillColor(sf::Color(r,g,b));
+		major_zones[col * zones + row].setFillColor(sf::Color(r, g, b));
 		last_clicked_row = row;
 		last_clicked_col = col;
 	}
 
-	// CHANGE NAME To zone !!!!!!!!!!!!!!
+	// CHANGE NAME To zone!
 	std::vector<sf::RectangleShape> get_major_zones() { return major_zones; }
 
 };

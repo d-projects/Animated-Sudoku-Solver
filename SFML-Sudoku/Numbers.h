@@ -30,7 +30,7 @@ public:
 	}
 
 	void set_single_number(int n, int row, int col) {
-		//check this !!!!
+		//check this!
 		numbers[col][row].setString(std::to_string(n));
 	}
 
